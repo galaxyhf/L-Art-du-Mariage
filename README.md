@@ -16,7 +16,7 @@ O sistema simula uma plataforma de planejamento de casamento com foco na experi�
 
 ---
 
-### 🎨 **Tecnologias Utilizadas**
+### 🖥️ **Tecnologias Utilizadas**
 
 - **HTML5**
 - **CSS3**
