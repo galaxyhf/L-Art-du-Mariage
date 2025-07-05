@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login | L'Art du Mariage</title>
+
+  <!-- Seus CSS -->
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="login.css"/>
+</head>
+<body class="login-page">
+
+  <div class="login-container">
+    <div class="login-aside">
+      <div class="login-aside__inner">
+        <p class="login-aside__text">
+          Insira seu e-mail<br/>e senha para acessar
+        </p>
+      </div>
+    </div>
+
+    <div class="login-form-wrapper">
+      <div class="login-form">
+        <img src="assets/logo.png" alt="L'Art du Mariage" class="login-form__logo"/>
+
+        <!-- inputs com IDs -->
+        <input id="loginEmail" type="email" placeholder="Digite seu e-mail…" class="login-form__input"/>
+        <input id="loginSenha" type="password" placeholder="Digite sua senha…" class="login-form__input"/>
+
+        <a href="redefinir-senha.html" class="login-form__forgot">
+          Redefinir minha senha
+        </a>
+
+        <!-- botão tipo=button -->
+        <button id="loginBtn" type="button" class="login-form__submit">
+          Acessar
+        </button>
+
+        <a href="cadastro.html" class="login-form__register">
+          Ainda não tenho conta
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- script embutido só para este login.html -->
+  <script>
+    document.getElementById('loginBtn').addEventListener('click', () => {
+      // aqui você poderia validar e-mail/senha, mas só redireciona de volta
+      window.location.href = 'index.html';
+    });
+  </script>
+</body>
+</html>

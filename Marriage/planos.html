@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>L'Art du Mariage — Planos</title>
+
+  <!-- Google Fonts e FontAwesome (igual ao index) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"/>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="..."
+    crossorigin="anonymous"
+  />
+
+  <!-- Seu CSS principal -->
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+   <!-- Top bar -->
+    <header class="top-bar">
+        <div class="container">
+            <div class="logo">
+                <!-- Substitua pelo seu SVG ou IMG -->
+                <img src="Assets/logo.png" alt="Logo L'Art du Mariage" />
+                <h1>L'ART DU MARIAGE</h1>
+            </div>
+            <div class="search-register">
+                <div class="search-box">
+                    <input type="text" placeholder="Do que precisa?" />
+                    <!-- insere seu SVG como img -->
+                    <img src="assets/vector.svg" alt="Buscar" class="icon-search" />
+                </div>
+
+                <a href="cadastro.html" class="register">
+                    <!-- insere seu SVG como img -->
+                    <img src="assets/person-24-dp-99-b-564-fill-0-wght-400-grad-0-opsz-242.svg" alt="Usuário"
+                        class="icon-user" />
+                    <span>Cadastre-se<br /><small>Clique aqui!</small></span>
+                </a>
+            </div>
+        </div>
+        <!-- Navegação secundária -->
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="servicos.html" class="active">Serviços</a></li>
+                <li><a href="planos.html">Planos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+  <!-- Seção Planos -->
+  <main>
+    <section class="plans-section">
+      <div class="container">
+        <h2>Planos</h2>
+        <p class="subtitle">
+          No nosso site temos a diversidade de vários planos para o seu conforto financeiro
+        </p>
+
+        <h3 class="plans-title">Planos vantajosos para o seu casamento</h3>
+        <div class="plans-cards">
+          <!-- Cartão Essencial -->
+          <div class="plan-card">
+            <i class="fa fa-list plan-icon"></i>
+            <h4>Essencial</h4>
+            <p class="plan-desc">Organização básica, ideal para casamentos simples.</p>
+            <div class="plan-price">R$ 2.500</div>
+          </div>
+
+          <!-- Cartão Completo -->
+          <div class="plan-card">
+            <i class="fa fa-globe plan-icon"></i>
+            <h4>Completo</h4>
+            <p class="plan-desc">Um organização completa do seu casamento, recomendado para casamentos grandes.</p>
+            <div class="plan-price">R$ 4.800</div>
+          </div>
+
+          <!-- Cartão Luxo -->
+          <div class="plan-card">
+            <i class="fa fa-star plan-icon"></i>
+            <h4>Luxo</h4>
+            <p class="plan-desc">Esse é para aqueles que já gostam de uma festa grande, com tudo incluso!</p>
+            <div class="plan-price">R$ 7.900</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Detalhe de um Plano ======= -->
+<section class="plan-detail">
+    <div class="container">
+      <!-- Título centralizado com underline animado -->
+      <h3 class="plan-detail-title">Um pouco mais dos nossos planos!</h3>
+  
+      <!-- Conteúdo em duas colunas -->
+      <div class="plan-detail-content">
+        <!-- Texto -->
+        <div class="plan-detail-text">
+          <h4>
+            <span class="plan-prefix">Plano</span> Essencial
+          </h4>
+          <p>
+            Ideal para casamentos intimistas e simples, este plano oferece a organização básica do evento.
+            É perfeito para casais que desejam uma cerimônia elegante, porém sem muitos detalhes extras.
+            Cuidamos dos pontos principais para que seu grande dia aconteça com tranquilidade, charme e economia.
+          </p>
+        </div>
+        <!-- Imagem ilustrativa -->
+        <div class="plan-detail-image">
+          <img src="assets/back-essencial.png"
+               alt="Exemplo de interface do Plano Essencial"/>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Divider verde abaixo -->
+  <div class="plans-divider"></div>
+  </main>
+
+  <!-- ======= Detalhe do Plano Completo ======= -->
+<section class="plan-detail">
+    <div class="container">
+      <div class="plan-detail-content reverse">  <!-- note o “.reverse” -->
+        
+        <!-- 1) Imagem à esquerda -->
+        <div class="plan-detail-image">
+          <img src="assets/back-completo.png"
+               alt="Mockup Plano Completo"/>
+        </div>
+  
+        <!-- 2) Texto à direita -->
+        <div class="plan-detail-text">
+          <h4>
+            <span class="plan-prefix">Plano</span> Completo
+          </h4>
+          <p>
+            Pensado para casamentos de médio a grande porte, este plano oferece uma organização completa do evento.
+            Inclui planejamento detalhado, suporte na escolha de fornecedores e acompanhamento de cada etapa.
+            É a escolha ideal para quem deseja um casamento estruturado, sem se preocupar com os bastidores.
+          </p>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+  <!-- Se quiser, repita a divider verde igual antes -->
+  <div class="plans-divider"></div>
+
+
+  <!-- ======= Detalhe do Plano Luxo ======= -->
+<section class="plan-detail">
+    <div class="container">
+      <div class="plan-detail-content">  
+        
+        <!-- 1) Texto à esquerda -->
+        <div class="plan-detail-text">
+          <h4>
+            <span class="plan-prefix">Plano</span> Luxo
+          </h4>
+          <p>
+            Feito para casais que sonham alto! Este plano inclui tudo o que há de melhor para uma festa grandiosa,
+            com todos os detalhes pensados e executados com perfeição. Desde o planejamento até a execução no dia,
+            cada momento é cuidado com atenção para proporcionar uma experiência inesquecível, com tudo incluso.
+          </p>
+        </div>
+  
+        <!-- 2) Imagem à direita -->
+        <div class="plan-detail-image">
+          <img 
+            src="assets/back-luxo.png" 
+            alt="Mockup Plano Luxo" 
+          />
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+     <!-- ======= Help / Ajuda Rápida ======= -->
+<section class="help-section">
+    <div class="container help-content">
+  
+      <!-- Coluna 1: ações rápidas -->
+      <div class="help-actions">
+        <h3>Vamos te ajudar!</h3>
+        <ul>
+          <li><a href="#planejar">Quero planejar meu casamento</a></li>
+          <li><a href="#lista-casamento">Quero receber a lista de presentes em dinheiro</a></li>
+          <li><a href="#presentear">Quero presentear um casal</a></li>
+          <li><a href="#faq">Quero tirar minhas dúvidas</a></li>
+        </ul>
+      </div>
+  
+      <!-- Coluna 2: mais sobre a gente -->
+      <div class="help-about">
+        <h3>Mais da gente</h3>
+        <ul>
+          <li><a href="#sobre">Sobre nós</a></li>
+          <li><a href="#equipe">Nossa equipe</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#blog">Blog</a></li>
+        </ul>
+      </div>
+  
+    </div>
+  </section>
+  
+  <!-- ======= Footer ======= -->
+  <footer id="contato" class="site-footer">
+    <div class="container footer-content">
+  
+      <!-- Logo e copy -->
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="Logo L'Art du Mariage" />
+        <p>© 2025 L'Art du Mariage. Todos os direitos reservados.</p>
+      </div>
+  
+      <!-- Navegação rápida -->
+      <nav class="footer-nav">
+        <a href="#servicos">Serviços</a>
+        <a href="#planos">Planos</a>
+        <a href="#contato">Contato</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+  
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', ()=> {
+      const cards = document.querySelectorAll('.plan-card');
+      const io = new IntersectionObserver((entries, obs) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.classList.add('visible');
+            obs.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.2 });
+  
+      cards.forEach(card => io.observe(card));
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('.plan-detail');
+    const obs = new IntersectionObserver((entries, io) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    sections.forEach(sec => obs.observe(sec));
+  });
+
+  </script>
+</body>
+</html>

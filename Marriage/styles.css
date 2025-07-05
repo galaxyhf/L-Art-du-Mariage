@@ -1,0 +1,2338 @@
+/* Variáveis de cor */
+:root {
+    --dark-green: #3b510a;
+    --light-green: #73973b;
+    --accent-green: #8ca63d;
+    --gray-text: #666;
+    --white: #fff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+/* Reset e base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.4;
+}
+
+/* Container centralizado */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Top Bar */
+.top-bar {
+    background-color: var(--dark-green);
+    color: var(--white);
+}
+
+.top-bar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+.top-bar .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.top-bar .logo img {
+    width: 80px;
+    height: auto;
+}
+
+.top-bar .logo h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+}
+
+/* Busca e cadastro */
+/* ***** Container da busca + registro ***** */
+.search-register {
+    display: flex;
+    align-items: center;
+    /* verticalmente centralizados */
+    gap: 30px;
+    /* espaço entre busca e registro */
+}
+
+/* ***** Caixa de busca ***** */
+.search-box {
+    display: flex;
+    align-items: center;
+    height: 38px;
+    /* controla a altura total */
+    background: #fff;
+    padding: 0 14px;
+    /* espaçamento interno horizontal */
+    border-radius: 19px;
+    /* metade da altura para bordas perfeitas */
+}
+
+.search-box input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    line-height: 1;
+    /* deixa o texto bem centralizado */
+}
+
+.search-box .fa-search {
+    margin-left: 10px;
+    font-size: 1.2rem;
+    /* ajusta o tamanho do ícone */
+    color: var(--accent-green);
+}
+
+/* ***** Link de cadastro ***** */
+.register {
+    display: flex;
+    align-items: center;
+    /* centraliza ícone e texto */
+    gap: 8px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    line-height: 1;
+}
+
+.register .fa-user {
+    font-size: 1.3rem;
+    /* controla o tamanho do ícone de usuário */
+}
+
+.register span {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+    /* aproxima as duas linhas de texto */
+}
+
+.register small {
+    font-size: 0.7rem;
+    opacity: 0.85;
+}
+
+/* Menu principal */
+.main-nav {
+    background-color: var(--light-green);
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 40px;
+    padding: 10px 0;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #222;
+    font-weight: 500;
+}
+
+/* Hero */
+.hero {
+    background: var(--white);
+    padding: 60px 0;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    /* aumenta o espaçamento para acomodar a imagem maior */
+}
+
+.hero-text h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    border-bottom: 3px solid var(--accent-green);
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    color: var(--gray-text);
+    max-width: 400px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--accent-green);
+    color: var(--white);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--light-green);
+}
+
+/* Estilização da imagem hero */
+.hero-image {
+    /* antes: width: 500px; height: 300px; */
+    width: 600px;
+    /* largura maior */
+    height: 360px;
+    /* altura proporcional */
+
+    /* bordas arredondadas (você pode ajustar estes valores também se quiser) */
+    border-top-left-radius: 250px;
+    border-bottom-left-radius: 250px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+
+    /* centra verticalmente caso precise */
+    margin-left: auto;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* define tamanho e alinhamento dos ícones */
+.icon-search,
+.icon-user {
+    width: 20px;
+    /* ou o tamanho que você desejar */
+    height: 20px;
+    flex-shrink: 0;
+    /* para não encolher dentro do flex */
+}
+
+/* espaço entre input e lupa */
+.search-box .icon-search {
+    margin-left: 10px;
+}
+
+/* espaço entre ícone de usuário e texto */
+.register .icon-user {
+    margin-right: 8px;
+}
+
+/* ======= Seção “Vantagens” ======= */
+.advantages {
+    padding: 80px 0;
+    background-color: var(--white);
+    text-align: center;
+    /* centraliza TUDO dentro da seção */
+}
+
+.advantages h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    color: #222;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.advantages .subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    color: var(--gray-text);
+    max-width: 720px;
+    margin: 0 auto;
+    /* mantém largura limitada, mas centralizada */
+    line-height: 1.5;
+}
+
+/* ======= Seção “Lista de Casamento” ======= */
+.gift-list {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.gift-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    /* espaçamento entre texto e visual */
+}
+
+/* —— texto —— */
+.gift-text h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #222;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.gift-text .subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.15rem;
+    color: var(--gray-text);
+    max-width: 400px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.link-more {
+    display: inline-flex;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: var(--accent-green);
+    text-decoration: none;
+    transition: opacity .2s;
+}
+
+.link-more .fa-arrow-right {
+    margin-left: 6px;
+}
+
+.link-more:hover {
+    opacity: .8;
+}
+
+/* —— visual —— */
+.gift-visual {
+    position: relative;
+    width: 820px;
+    /* ajuste para a largura real do seu grid */
+    /* remova qualquer height fixa — deixe o grid definir a altura */
+}
+
+/* imagem do grid — forte background da seção */
+.gift-grid {
+    display: block;
+    width: 100%;
+    /* ocupa toda a largura do .gift-visual */
+    height: auto;
+    position: relative;
+    z-index: 1;
+    /* fica atrás da imagem curva */
+}
+
+/* imagem curva embaixo/direita */
+.gift-image {
+    position: absolute;
+    bottom: -20px;
+    right: 90px;
+    width: 350px;
+    /* ou o tamanho que você quiser */
+    height: 180px;
+    object-fit: cover;
+    border-top-left-radius: 200px;
+    border-bottom-left-radius: 200px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+
+    z-index: 2;
+    /* sobrepõe o grid */
+}
+
+/* ======= Seção RSVP ======= */
+.rsvp {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.rsvp-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+/* —— imagem curva de fundo —— */
+.rsvp-image {
+    position: relative;
+    width: 500px;
+    /* ajuste conforme o tamanho real da imagem */
+}
+
+/* fundo curvo */
+.rsvp-bg {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 200px;
+    border-bottom-left-radius: 200px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    display: block;
+}
+
+/* card RSVP sobreposto */
+.rsvp-card {
+    position: absolute;
+    bottom: -20px;
+    /* ligeiramente para fora embaixo */
+    left: 40px;
+    /* ‘puxa’ o card para dentro, ajustável */
+    width: 300px;
+    /* ajuste conforme seu asset */
+    height: auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+/* —— texto —— */
+.rsvp-text h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #222;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.rsvp-text p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.15rem;
+    color: var(--gray-text);
+    max-width: 480px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+/* reutiliza o link-more já criado */
+.rsvp-text .link-more {
+    font-size: 1rem;
+}
+
+/* ======= Seção Convite Digital (única imagem) ======= */
+.invite {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.invite-content {
+    display: flex;
+    align-items: center;
+    /* em vez de space-between, alinha à esquerda */
+    justify-content: flex-start;
+    /* gap menor entre texto e imagem */
+    gap: 280px;
+    /* antes era 60px */
+}
+
+/* Texto igual aos outros */
+.invite-text h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.invite-text p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.15rem;
+    color: var(--gray-text);
+    max-width: 400px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+/* Container da imagem */
+.invite-visual {
+    width: 420px;
+    /* ajuste conforme o tamanho real da sua imagem */
+}
+
+/* A imagem com todos os convites */
+.invite-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ======= Seção Comunicação ======= */
+.communication {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+/* container do título já usa text-center */
+.communication h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.6rem;
+    color: #222;
+    line-height: 1.2;
+    margin-bottom: 40px;
+}
+
+/* estrutura flex das duas colunas */
+.communication-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    /* diminuiu de 60px para 40px */
+}
+
+/* —— visual (imagens) —— */
+.communication-visual {
+    position: relative;
+    width: 540px;
+    /* antes 500px → maior para caber melhor o mapa */
+}
+
+/* imagem de fundo curva */
+.communication-bg {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 220px;
+    border-bottom-left-radius: 220px;
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 24px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    display: block;
+}
+
+/* mapa sobreposto */
+.communication-map {
+    position: absolute;
+    bottom: -100px;
+    /* desceu um pouco mais */
+    left: 250px;
+    /* puxou para dentro */
+    width: 360px;
+    /* antes 300px → maior */
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    z-index: 2;
+}
+
+/* —— texto —— */
+/* reaproveita .subtitle dos outros */
+.communication-text .subtitle {
+    font-size: 1.25rem;
+    /* antes 1.15rem, deixou maior */
+    max-width: 520px;
+    /* um pouco mais largo para caber melhor */
+    line-height: 1.6;
+    /* espaçamento de linha maior */
+}
+
+.communication-text .link-more {
+    display: inline-block;
+    /* garante que margin-top funcione */
+    margin-top: 20px;
+    /* ajuste este valor até ficar no ponto */
+}
+
+
+/* ======= Seção “Cronograma” ======= */
+.schedule {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.schedule-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* —— Texto —— */
+.schedule-text h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.6rem;
+    color: #222;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.schedule-text .subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    color: var(--gray-text);
+    max-width: 500px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.schedule-text .link-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: var(--accent-green);
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.schedule-text .link-more:hover {
+    opacity: 0.8;
+}
+
+/* —— Visual (fundo + form) —— */
+.schedule-visual {
+    position: relative;
+    width: 500px;
+    /* ajuste conforme seu design */
+    min-height: 240px;
+    /* altura mínima para caber todo o bloco */
+    overflow: visible;
+    /* garante que as curvas “saíam” */
+}
+
+/* 1) Fundo curvo atrás */
+.schedule-bg {
+    position: absolute;
+    top: -10px;
+    /* puxa 10px para cima */
+    left: -10px;
+    /* puxa 10px para a esquerda */
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-top-left-radius: 200px;
+    border-bottom-left-radius: 200px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* 2) Screenshot do formulário à frente */
+.schedule-form {
+    position: absolute;
+    top: 150px;
+    /* desce o form 30px do topo do container */
+    left: -200px;
+    /* afasta 30px da lateral esquerda */
+    width: calc(100% - 60px);
+    /* mantém 30px de margem em cada lado */
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    z-index: 2;
+}
+
+/* ======= Seção Perguntas Frequentes ======= */
+.faq {
+    padding: 80px 0;
+    background: var(--white);
+  }
+  
+  .faq-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 60px;
+  }
+  
+  /* —— Coluna esquerda —— */
+  .faq-intro h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+  }
+  .faq-intro p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.15rem;
+    color: var(--gray-text);
+    max-width: 320px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+  }
+  .faq-intro .link-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: var(--accent-green);
+    text-decoration: none;
+    transition: opacity .2s;
+  }
+  .faq-intro .link-more:hover {
+    opacity: 0.8;
+  }
+  
+  /* —— Coluna direita —— */
+  .faq-items {
+    flex: 1;
+  }
+  
+  /* Cada bloco de pergunta/resposta */
+  .faq-item {
+    margin-bottom: 20px;
+  }
+  
+  /* Pergunta */
+  .faq-question {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--dark-green);
+    background-color: var(--light-green);
+    padding: 10px 15px;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  /* Resposta */
+  .faq-answer {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    color: #333;
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-radius: 0 0 8px 8px;
+    line-height: 1.5;
+  }
+
+
+  /* ======= Help / Ajuda Rápida ======= */
+.help-section {
+    background-color: var(--light-green);
+    padding: 40px 0;
+  }
+  .help-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+  }
+  .help-actions,
+  .help-about {
+    flex: 1;
+  }
+  .help-actions h3,
+  .help-about h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: var(--dark-green);
+    margin-bottom: 16px;
+  }
+  .help-actions ul,
+  .help-about ul {
+    list-style: none;
+  }
+  .help-actions li,
+  .help-about li {
+    margin-bottom: 10px;
+  }
+  .help-actions a,
+  .help-about a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #333;
+    text-decoration: none;
+    transition: color .2s;
+  }
+  .help-actions a:hover,
+  .help-about a:hover {
+    color: var(--accent-green);
+  }
+  
+  /* ======= Footer ======= */
+  .site-footer {
+    background-color: var(--dark-green);
+    color: var(--white);
+  }
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 0;
+  }
+  .footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer-brand img {
+    width: 100px;
+    margin-bottom: 8px;
+  }
+  .footer-brand p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+  }
+  .footer-nav {
+    display: flex;
+    gap: 20px;
+  }
+  .footer-nav a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    color: var(--white);
+    text-decoration: none;
+    transition: opacity .2s;
+  }
+  .footer-nav a:hover {
+    opacity: .8;
+  }
+  .footer-social a {
+    margin-right: 12px;
+    font-size: 1.2rem;
+    color: var(--white);
+    transition: opacity .2s;
+  }
+  .footer-social a:hover {
+    opacity: .8;
+  }
+  
+  /* responsivo */
+  @media (max-width: 768px) {
+    .help-content,
+    .footer-content {
+      flex-direction: column;
+      text-align: center;
+    }
+    .help-content { gap: 40px; }
+    .footer-nav { justify-content: center; }
+    .footer-brand { align-items: center; }
+  }
+  
+  /* =========================================== Seção de Planos ================================================ */
+.plans-section {
+    padding: 80px 0;
+    background: var(--white);
+  }
+  .plans-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .plans-section .subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.15rem;
+    color: var(--gray-text);
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .plans-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    text-align: center;
+    border-bottom: 3px solid var(--accent-green);
+    display: inline-block;
+    margin: 0 auto 50px auto;
+  }
+  
+  /* Container dos cartões */
+  .plans-cards {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  /* Cada cartão */
+  .plan-card {
+    background: #fff;
+    width: 220px;
+    padding: 30px 20px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Ícone no topo */
+  .plan-icon {
+    font-size: 2rem;
+    color: var(--accent-green);
+    margin-bottom: 15px;
+  }
+  
+  /* Nome do plano */
+  .plan-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Descrição */
+  .plan-desc {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    color: var(--gray-text);
+    margin-bottom: 20px;
+  }
+  
+  /* Preço */
+  .plan-price {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #C1272D; /* vermelho conforme seu exemplo */
+    margin-top: auto;
+  }
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .plans-cards {
+      gap: 20px;
+    }
+  }
+  
+
+  /* A) Animação da linha no título */
+  .plans-title {
+    display: block;          /* garante que seja bloco */
+    width: fit-content;      /* largura pelo conteúdo */
+    margin: 0 auto 50px;     /* centraliza horizontalmente e dá 50px de bottom */
+    text-align: center;      /* centraliza o texto dentro do bloco */
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    border-bottom: 3px solid var(--accent-green);
+  }
+  .plans-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--accent-green);
+    transform: translateX(-100%);
+    animation: slideIn 0.8s forwards ease-out 0.5s;
+  }
+  
+  /* B) Fade-in + slide-up para cada .plan-card */
+  .plan-card {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  .plan-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* C) Hover mais rico */
+  .plan-card {
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  .plan-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  }
+  .plan-card:hover .plan-icon {
+    transform: rotate(360deg);
+  }
+  
+  /* D) Icone com transição */
+  .plan-icon {
+    transition: transform 0.6s ease;
+  }
+  
+  /* Keyframes */
+  @keyframes slideIn {
+    to { transform: translateX(0); }
+  }
+
+  /* ======= Seção “Um pouco mais…” ======= */
+.plan-detail {
+    padding: 80px 0 0;               /* espaço somente em cima */
+    background: var(--white);
+    margin-bottom: 80px;
+  }
+  .plan-detail-title {
+    position: relative;
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .plan-detail-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    width: 120px;
+    height: 3px;
+    background: var(--accent-green);
+    transform: translateX(-50%);
+  }
+  
+  /* Duas colunas: texto + imagem */
+  .plan-detail-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+  }
+  .plan-detail-text {
+    flex: 1;
+  }
+  .plan-detail-text h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+  .plan-detail-text .plan-prefix {
+    color: var(--accent-green);
+    font-weight: 600;
+    margin-right: 6px;
+  }
+  .plan-detail-text p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.05rem;
+    color: var(--gray-text);
+    line-height: 1.6;
+  }
+  
+  /* Imagem responsiva */
+  .plan-detail-image img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    border-radius: 12px;
+  }
+  
+  /* ======= Divider verde ======= */
+  .plans-divider {
+    width: 100%;
+    height: 12px;
+    background: var(--light-green);
+    margin-top: 0;  /* colado logo abaixo da seção */
+  }
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .plan-detail-content {
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+    .plan-detail-content > div {
+      width: 100%;
+    }
+    .plan-detail-image {
+      margin-bottom: 30px;
+    }
+    .plan-detail-title {
+      margin-bottom: 30px;
+    }
+  }
+  
+  /* Caso queira ajustar espaçamentos específicos só para este block: */
+  .plan-detail-content.reverse .plan-detail-image img {
+    /* Por exemplo, se a mockup do Completo for maior/menor */
+    max-width: 480px;
+  }
+  
+  .plan-detail-content.reverse .plan-detail-text {
+    /* Ajusta largura do texto, se necessário */
+    max-width: 500px;
+  }
+  
+  /* ===== Animação para plan-detail ===== */
+.plan-detail {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .plan-detail.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+
+  /* ============================================ Seção Serviços ============================================= */
+.services-section {
+    padding: 80px 0;
+    background: var(--white);
+  }
+  
+  .services-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+  }
+  
+  .services-section .subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.15rem;
+    color: var(--gray-text);
+    margin-bottom: 50px;
+  }
+  
+  /* Grid de cards */
+  .services-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  /* Cada card de serviço */
+  .service-card {
+    background: #fff;
+    width: 220px;
+    padding: 30px 20px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform .3s, box-shadow .3s;
+  }
+  .service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  }
+  
+  /* Ícone do serviço */
+  .service-icon {
+    font-size: 2rem;
+    color: var(--accent-green);
+    margin-bottom: 15px;
+    transition: transform .6s ease;
+  }
+  .service-card:hover .service-icon {
+    transform: rotate(360deg);
+  }
+  
+  /* Título e descrição */
+  .service-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+  }
+  .service-card p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    color: var(--gray-text);
+    line-height: 1.5;
+  }
+  
+  /* Divider verde opcional abaixo */
+  .services-section + .plans-divider {
+    margin-top: 60px;
+  }
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .services-cards {
+      gap: 20px;
+    }
+  }
+  
+
+  /* ======= Blocos de Serviço Detalhado ======= */
+.service-detail {
+    padding: 80px 0;
+    background: var(--white);
+  }
+  .service-detail-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+  }
+  .service-detail-content.reverse {
+    flex-direction: row-reverse;
+  }
+  
+  /* Imagem curva atrás */
+  .service-detail-image img {
+    display: block;
+    width: 100%;
+    max-width: 500px;    /* ajuste ao tamanho do seu asset */
+    height: auto;
+    border-top-left-radius: 200px;
+    border-bottom-left-radius: 200px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  }
+  
+  /* Card de texto */
+  .service-detail-text {
+    flex: 1;
+    position: relative;
+    z-index: 2;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    max-width: 480px;
+  }
+  .service-detail-text h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    margin-bottom: 16px;
+  }
+  .service-detail-text .service-prefix {
+    color: var(--accent-green);
+    font-weight: 600;
+    margin-right: 6px;
+  }
+  .service-detail-text p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.05rem;
+    color: var(--gray-text);
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  .service-tag {
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    color: #333;
+    background: var(--light-green);
+    padding: 6px 12px;
+    border-radius: 8px;
+  }
+  
+  /* Divider verde entre seções */
+  .section-divider {
+    width: 100%;
+    height: 12px;
+    background: var(--light-green);
+  }
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .service-detail-content {
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+    .service-detail-content.reverse {
+      flex-direction: column;
+    }
+    .service-detail-image img,
+    .service-detail-text {
+      max-width: 100%;
+    }
+    .service-detail-text {
+      margin-top: 30px;
+    }
+  }
+  
+
+  .service-detail {
+    padding: /* cima/baixo */ 80px 0;
+  }
+  .service-detail-content {
+    gap: /* espaço entre colunas */ 40px;
+  }
+  .service-detail-image img {
+    max-width: /* ajuste para seu asset */ 500px;
+  }
+  .service-detail-text {
+    max-width: /* largura máxima do card de texto */ 480px;
+  }
+  .section-divider {
+    height: /* espessura da barra */ 12px;
+    background: var(--light-green);
+  }
+
+
+  /* 1) Hero: fade-in + slide-up on load */
+.hero {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: heroIn 0.8s ease-out forwards 0.3s;
+  }
+  @keyframes heroIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* 2) Scroll animations para as demais seções */
+  .scroll-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  .scroll-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+
+  /* ===== Wizard de Planejamento ===== */
+.wizard {
+  max-width: 800px;
+  margin: 2rem auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+}
+.wizard-steps {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  list-style: none;
+  counter-reset: step;
+}
+.wizard-steps li {
+  position: relative;
+  text-align: center;
+  flex: 1;
+  counter-increment: step;
+}
+.wizard-steps li::before {
+  content: counter(step);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: var(--accent-green);
+  color: #fff;
+  display: block;
+  margin: 0 auto .5rem;
+  line-height: 2rem;
+}
+.wizard-steps li.active::before {
+  background: var(--dark-green);
+}
+.wizard-content > section {
+  display: none;
+}
+.wizard-content > section.active {
+  display: block;
+}
+.wizard-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+.wizard-buttons button {
+  padding: .75rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  background: var(--accent-green);
+  color: #fff;
+  cursor: pointer;
+}
+.wizard-buttons button:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+
+/* === Wizard Geral === */
+/* Estilo geral do Wizard */
+.wizard {
+  max-width: 900px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Estilizando os passos */
+.wizard-steps {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  list-style: none;
+  counter-reset: step;
+}
+.wizard-steps li {
+  flex: 1;
+  text-align: center;
+  position: relative;
+  font-family: 'Playfair Display', serif;
+}
+.wizard-steps li::before {
+  content: counter(step);
+  display: block;
+  margin: 0 auto .5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #73973b, #8ca63d);
+  color: #fff;
+  line-height: 2.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+.wizard-steps li.active::before {
+  background: #3b510a;
+  transform: scale(1.2);
+}
+.wizard-steps li.active {
+  font-weight: bold;
+  color: #3b510a;
+}
+
+/* Estilizando as etapas do conteúdo */
+.wizard-content > section {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.wizard-content > section.active {
+  display: block;
+  opacity: 1;
+}
+.wizard-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #3b510a;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Estilizando os botões */
+.wizard-buttons button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(145deg, #73973b, #8ca63d);
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.wizard-buttons button:hover {
+  background: #3b510a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+.wizard-buttons button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Estilizando os campos de formulário */
+.form-group {
+  margin-bottom: 2rem;
+}
+.form-group label {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #8ca63d;
+  box-shadow: 0 4px 12px rgba(140, 166, 61, 0.2);
+}
+
+
+
+
+/* === Estilo do input de cor === */
+
+/* Estilo geral para os campos de cor */
+/* === Estilo do input de cor === */
+.form-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.form-group input[type="color"] {
+  -webkit-appearance: none; /* Remove o estilo padrão */
+  appearance: none;
+  width: 50px;  /* Tamanho do seletor de cor */
+  height: 50px;
+  border-radius: 50%; /* Tornar o input redondo */
+  border: 2px solid #ccc;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: transparent;  /* Iniciar sem cor */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-left: 10px;
+}
+
+/* Quando a cor é selecionada, o círculo será preenchido */
+.form-group input[type="color"]:focus {
+  outline: none;
+  border-color: var(--accent-green);
+  background-color: transparent; /* Foco no input */
+}
+
+/* Atualizando a cor do círculo */
+.form-group input[type="color"]:active,
+.form-group input[type="color"]:checked {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.form-group input[type="color"]:checked {
+  background-color: #8ca63d;  /* Defina a cor desejada */
+  border-color: #73973b;
+}
+
+/* Exibir a cor selecionada no círculo */
+.form-group input[type="color"]:hover {
+  background-color: #e6f7e0;
+  border-color: var(--accent-green);
+}
+
+/* wrapper para posicionar input e display juntos */
+.color-picker {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* deixa o input clicável mas 100% transparente */
+.color-input {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border: none;
+  padding: 0;
+  margin-left: 10px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* o círculo que mostra a cor */
+.color-display {
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background-color: #fff; /* cor inicial */
+  transition: background-color 0.3s ease;
+}
+
+
+
+
+/* Estilizando o preview do convite */
+.invite-preview {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #fafafa;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+.invite-preview img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Revisão */
+.review-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+.review-list li {
+  margin-bottom: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  color: #333;
+}
+.review-list li strong {
+  font-weight: bold;
+}
+
+/* Estilo para o botão "Confirmar Planejamento" */
+#confirmBtn {
+  display: block;
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.2rem;
+  background: linear-gradient(145deg, #3b510a, #73973b);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+#confirmBtn:hover {
+  background: #8ca63d;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+/* === Estilização dos radio buttons === */
+.plans-selection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.plans-selection label {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.plans-selection input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #f1f1f1;
+  border: 2px solid #8ca63d;
+  margin-right: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  transform: scale(1);
+}
+
+.plans-selection input[type="radio"]:checked {
+  background: #8ca63d;
+  border-color: #73973b;
+}
+
+.plans-selection input[type="radio"]:checked + span {
+  color: #3b510a;
+  font-weight: bold;
+}
+
+.plans-selection input[type="radio"]:hover {
+  transform: scale(1.2);
+  background: #e6f7e0;
+}
+
+.plans-selection input[type="radio"]:checked:hover {
+  transform: scale(1.2);
+  background: #73973b;
+  border-color: #3b510a;
+}
+
+.plans-selection span {
+  font-size: 1rem;
+  color: #555;
+  transition: all 0.3s ease;
+}
+
+.plans-selection input[type="radio"]:checked + span {
+  font-weight: bold;
+  color: #3b510a;
+}
+
+/* Hover no label */
+.plans-selection label:hover {
+  color: #73973b;
+}
+
+/* Preço em destaque */
+.plans-selection .price {
+  font-size: 1.2rem;
+  color: #3b510a;
+  margin-left: 8px;
+  font-weight: bold;
+}
+
+/* === Página de boas-vindas === */
+.welcome {
+  max-width: 600px;
+  margin: 4rem auto;
+  text-align: center;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.welcome h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+  margin-bottom: 1.5rem;
+  color: var(--dark-green);
+}
+.welcome p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+
+/* === Passo Presentes === */
+.grid-presentes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.card-presente {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  text-align: center;
+  padding: 1.5rem;
+  transition: transform .3s, box-shadow .3s;
+}
+.card-presente:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+.card-presente img {
+  max-height: 160px;
+  width: auto;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+  border-radius: 12px;
+}
+.card-presente h3 {
+  color: var(--dark-green);
+  margin-top: 1rem;
+}
+.card-presente p {
+  font-size: .95rem;
+  color: #555;
+}
+
+/* Formulário de presente */
+#form-personalizado {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+}
+#form-personalizado h3 {
+  color: var(--dark-green);
+  margin-bottom: 1rem;
+}
+#form-personalizado input[type="text"],
+#form-personalizado input[type="tel"] {
+  width: 100%;
+  padding: 1rem;
+  margin: .7rem 0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+#form-personalizado button {
+  background: linear-gradient(145deg, #73973b, #8ca63d);
+  color: #fff;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background .3s;
+}
+#form-personalizado button:hover {
+  background: linear-gradient(145deg, #c4e293, #8ca63d);
+}
+
+/* Sugestões como checkbox cards */
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .6rem 1rem;
+  background: linear-gradient(145deg, #73973b, #8ca63d);
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 500;
+   color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+.checkbox-item:hover {
+  background: #e6f5e7;
+  transform: scale(1.02);
+  box-shadow: 0 2px 10px rgba(129,199,132,0.2);
+}
+#sugestoes-presentes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: .8rem;
+  margin: 1rem 0;
+}
+#imagensSelecionadas {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+#imagensSelecionadas img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+
+/* === Bem-vindo === */
+.welcome {
+  max-width: 800px;
+  margin: 4rem auto;
+  text-align: center;
+  padding: 0 1rem;
+}
+.welcome h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.6rem;
+  color: var(--dark-green);
+  margin-bottom: 1rem;
+}
+.welcome p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+/* Canvas confetti em fullscreen */
+#confetti-canvas {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Countdown */
+.countdown {
+  background: var(--light-green);
+  color: var(--white);
+  font-size: 1.3rem;
+  padding: 1rem;
+  border-radius: 8px;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+/* Botões de ação */
+.welcome-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+.welcome-actions .btn {
+  background: linear-gradient(145deg, #73973b, #8ca63d);
+  color: #fff;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  transition: background 0.2s, transform 0.2s;
+}
+.welcome-actions .btn:hover {
+  background: var(--dark-green);
+  transform: translateY(-2px);
+}
+
+/* Planner card */
+.planner-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  background: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 3rem;
+}
+.planner-card img {
+  width: 70px; height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.planner-card .planner-info h3 {
+  margin: 0;
+  color: var(--dark-green);
+}
+.planner-card .planner-info p {
+  margin: 0.2rem 0;
+  font-size: 0.95rem;
+}
+
+/* Mini-FAQ */
+.mini-faq {
+  max-width: 600px;
+  margin: 0 auto 4rem;
+  text-align: left;
+}
+.mini-faq h2 {
+  font-family: 'Playfair Display', serif;
+  color: var(--dark-green);
+  margin-bottom: 1rem;
+}
+.mini-faq details {
+  background: #fafafa;
+  padding: 0.8rem 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  margin: 1.5rem 0;        /* 1.5rem acima e abaixo */
+  border-radius: 8px;
+  overflow: hidden;
+}
+.mini-faq summary {
+  font-weight: 600;
+  cursor: pointer;
+   padding: 1rem 1.2rem;
+}
+.mini-faq summary::-webkit-details-marker {
+  display: none;
+}
+.mini-faq summary::before {
+  content: '+';
+  display: inline-block;
+  width: 1rem;
+  text-align: center;
+  margin-right: 0.5rem;
+}
+.mini-faq details[open] summary::before {
+  content: '−';
+}
+.mini-faq details p {
+  margin-top: 0.5rem;
+  line-height: 1.5;
+
+  padding: 0.75rem 1.2rem 1.2rem; /* top, horizontal, bottom */
+  margin: 0;
+}
+
+/* Ajuste geral de line-height e font-size */
+.mini-faq summary,
+.mini-faq details p {
+  line-height: 1.6;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+}
+.welcome-actions .btn {
+  font-family: 'Poppins', sans-serif !important;
+  text-transform: none;           /* se os outros não forem uppercase */
+  font-size: 1rem;                /* ajuste pra igualar */
+  line-height: 1.4;
+}
+
+/* Container para centralizar o botão de voltar */
+.welcome-back {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+/* Estilo do botão “Voltar ao Início” */
+.back-home {
+  display: inline-block;
+  background: var(--light-green);
+  color: #fff;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  transition: background 0.2s, transform 0.2s;
+}
+.back-home:hover {
+  background: var(--dark-green);
+  transform: translateY(-2px);
+}
+/* Saudação no header da dashboard */
+.user-greet {
+  font-family: 'Poppins', sans-serif;
+  color: var(--white);
+}
+.user-greet a {
+  color: var(--accent-green);
+  text-decoration: none;
+  margin-left: 0.5rem;
+}
+.user-greet a:hover {
+  text-decoration: underline;
+}
+
+/* Botão do dashboard */
+.container .btn {
+  display: inline-block;
+  background: var(--accent-green);
+  color: #fff;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  transition: background 0.2s ease;
+}
+.container .btn:hover {
+  background: var(--dark-green);
+}
+
+
+.dashboard-title {
+  font-family: 'Playfair Display', serif;
+  margin: 2rem 0 1rem;
+  text-align: center;
+  color: var(--dark-green);
+}
+
+/* Ajustes do card-grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+.card-grid .card {
+  background: #fff;
+  padding: 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-align: center;
+}
+.card-grid .card h4 {
+  margin-bottom: 0.5rem;
+  color: var(--accent-green);
+}
+.card-grid .card p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Botões de ação */
+.dashboard-actions .btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+.dashboard-actions .btn {
+  background: var(--accent-green);
+  color: #fff;
+  padding: 0.7rem 1.6rem;
+  border-radius: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+  text-decoration: none;
+}
+.dashboard-actions .btn:hover {
+  background: var(--dark-green);
+}
+
+/* Contador */
+#dash-countdown {
+  margin: 1rem auto 2rem;
+  display: inline-block;
+}
+
+/* Planner card */
+.planner-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  background: #fafafa;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.planner-card img {
+  width: 60px; height: 60px;
+  border-radius: 50%;
+}
+
+
+/* ----- Botão “Voltar ao Início” na tela de login ----- */
+.login-back {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+.login-back .back-home {
+  display: inline-block;
+  background: var(--light-green);
+  color: var(--white);
+  font-family: 'Poppins', sans-serif;
+  padding: 0.6rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s;
+}
+.login-back .back-home:hover {
+  background: var(--accent-green);
+  transform: translateY(-2px);
+}
+
+/* Botão “Voltar ao Início” na tela de login */
+.login-back {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+.login-back .back-home {
+  display: inline-block;
+  background: var(--light-green);
+  color: var(--white);
+  font-family: 'Poppins', sans-serif;
+  padding: 0.6rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s;
+}
+.login-back .back-home:hover {
+  background: var(--accent-green);
+  transform: translateY(-2px);
+}
+
+/* === Welcome – Resumo Rápido === */
+.welcome-summary {
+  max-width: 700px;
+  margin: 2rem auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+.welcome-summary h2 {
+  font-family: 'Playfair Display', serif;
+  color: var(--dark-green);
+  margin-bottom: 1rem;
+}
+.summary-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+.summary-list li {
+  margin: 0.5rem 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+}
+.summary-list strong {
+  color: var(--accent-green);
+}
+
+
+/* ===== Passo 4: Cartão do Wedding Planner ===== */
+.welcome-planner {
+  max-width: 700px;
+  margin: 2rem auto;
+  text-align: center;
+}
+.welcome-planner h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: var(--dark-green);
+  margin-bottom: 1rem;
+}
+.planner-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  background: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.planner-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.planner-info h3 {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  color: var(--dark-green);
+}
+.planner-info p {
+  margin: 0.3rem 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+}
+.planner-info a {
+  color: var(--accent-green);
+  text-decoration: none;
+  transition: text-decoration .2s;
+}
+.planner-info a:hover {
+  text-decoration: underline;
+}
+
+
+/* ===== Passo 5: botão de download ===== */
+.download-plan {
+  text-align: center;
+  margin: 2rem 0;
+}
+.download-plan .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  background: linear-gradient(145deg, #73973b, #8ca63d);
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  padding: .8rem 2rem;
+  border-radius: 50px;
+  transition: background .2s, transform .2s;
+}
+.download-plan .btn:hover {
+  background: var(--dark-green);
+  transform: translateY(-2px);
+}
+
+/* ===== Passo 7: Mapa do Evento & Tour Virtual ===== */
+.welcome-map {
+  max-width: 800px;
+  margin: 3rem auto;
+  text-align: center;
+  padding: 0 1rem;
+}
+.welcome-map h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: var(--dark-green);
+  margin-bottom: 1.5rem;
+}
+.map-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 */
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.map-container iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: 0;
+}
+.welcome-map p {
+  margin: 0.5rem 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+}
+.welcome-map a {
+  color: var(--accent-green);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+.welcome-map a:hover {
+  color: var(--dark-green);
+}
+
+
+/* ===== Modal de Edição do Convite ===== */
+.modal {
+  display: none; /* oculto até abrir */
+  position: fixed;
+  z-index: 10000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+.modal-content {
+  background: #fff;
+  margin: 5% auto;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+.modal-close {
+  position: absolute;
+  top: 0.5rem; right: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+}
+.modal-form label {
+  display: block;
+  margin-top: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+.modal-form input {
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+#modalSaveBtn {
+  display: block;
+  margin: 1.5rem auto 0;
+  background: linear-gradient(145deg, #73973b, #8ca63d);
+  color: #fff;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+#modalSaveBtn:hover {
+  background: var(--dark-green);
+  transform: translateY(-2px);
+}
+
+/* Descrição do plano selecionado */
+.plan-details {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: #fafafa;
+  border-left: 4px solid var(--accent-green);
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  border-radius: 4px;
+}
