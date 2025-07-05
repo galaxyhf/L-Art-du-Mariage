@@ -1,10 +1,10 @@
-💍 L’Art du Mariage
+## 💍**L’Art du Mariage**
 
 Projeto front-end estático para gerenciamento de casamentos. O site oferece uma experiência completa e elegante para casais planejarem o grande dia — desde o cadastro até o acompanhamento do cronograma, escolha de planos, serviços, lista de presentes e mais.
 
 ---
 
-🌐 Visão Geral
+### 🌐 **Visão Geral**
 
 O sistema simula uma plataforma de planejamento de casamento com foco na experiência do cliente. O usuário pode:
 
@@ -16,7 +16,7 @@ O sistema simula uma plataforma de planejamento de casamento com foco na experi�
 
 ---
 
-🎨 Tecnologias Utilizadas
+### 🎨 **Tecnologias Utilizadas**
 
 - **HTML5**
 - **CSS3**
@@ -26,7 +26,7 @@ O sistema simula uma plataforma de planejamento de casamento com foco na experi�
 
 ---
 
-🧠 Funcionalidades
+### 🧠 **Funcionalidades**
 
 - 🎯 Planejamento guiado de casamento
 - 🧾 Dashboard com status do evento
@@ -37,7 +37,7 @@ O sistema simula uma plataforma de planejamento de casamento com foco na experi�
 
 ---
 
-📂 Diretórios
+### 📂 **Diretórios**
 
 - `Assets/` → Imagens e elementos gráficos usados em todo o site.
 - `script.js` → JavaScript para interações, exibição de informações, etc.
@@ -45,7 +45,13 @@ O sistema simula uma plataforma de planejamento de casamento com foco na experi�
 
 ---
 
-🚀 Como rodar o projeto
+### 🚀 **Como rodar o projeto**
 
- ```bash
-   git clone https://github.com/galaxyhf/L-Art-du-Mariage.git
+Basta acessar este link onde o site se encontra hospedado:
+
+🔗 [https://lartdumariage.netlify.app](https://lartdumariage.netlify.app)
+
+Ou, se preferir, clone o projeto com o comando:
+
+```bash
+git clone https://github.com/galaxyhf/L-Art-du-Mariage.git
